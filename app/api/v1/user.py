@@ -10,3 +10,6 @@ async def read_items():
 async def get_all():
     return[{"hello" : "fadwa"}, {"good" : "girl"}]
 
+@app.put("/items/{item_id}")
+def update_item(item_id: int, item: Item):
+    return {"hello": item.name, "good": item_id}
